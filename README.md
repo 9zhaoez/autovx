@@ -87,6 +87,29 @@ python wechat_bot.py --clip
 
 ---
 
+## 🆚 和同类项目对比 / vs Similar Projects
+
+| 对比维度 | **autovx** | [omni-bot-sdk](https://github.com/weixin-omni/omni-bot-sdk-oss) | [WeChat-DeepSeek](https://github.com/LaoChouPro/WeChat-DeepSeek-Auto-Response) | [deepseek_wechat_bot](https://github.com/zhangyanhui/deepseek_wechat_bot) | [NGCBot](https://github.com/TANGandXUE/NGCBot-Advanced) |
+|---------|-----------|-----------|---------------|---------------------|--------|
+| 侵入方式 | 🟢 零侵入截图 | 🟢 零侵入 YOLO+OCR | 🟢 零侵入截图 | 🟢 零侵入截图 | 🔴 Hook 注入 |
+| 消息检测 | ⭐ **像素差分 80ms** | 数据库轮询 | 定时轮询 | 红点检测 | Hook 事件 |
+| OCR 引擎 | RapidOCR / EasyOCR / Paddle | 内置 OCR | EasyOCR | EasyOCR | 扩展支持 |
+| AI 支持 | DeepSeek + OpenAI + Ollama + 硅基 | OpenAI + Dify | DeepSeek | DeepSeek | DeepSeek + GPT + 星火 |
+| 并发保护 | ✅ **熔断器** | ❌ | ❌ | ❌ | ❌ |
+| 对话记忆 | ✅ SQLite + 事实提取 | ❌ | ❌ | ✅ SQLite | ✅ |
+| 反检测 | ✅ **人性化操作** | ❌ | ❌ | ❌ | ❌ |
+| 插件化 | ❌ | ✅ MQTT + 插件 | ❌ | ❌ | ✅ 插件系统 |
+| 封号风险 | 🟢 极低 | 🟢 低 | 🟢 极低 | 🟢 极低 | 🔴 中高 |
+| 上手难度 | ⭐ 5分钟 | ⭐⭐⭐ 需配置 | ⭐⭐ | ⭐⭐ | ⭐⭐⭐ |
+
+**autovx 的三个独家优势：**
+
+1. **⚡ 像素差分实时监听** — 每 80ms 截取聊天区底部做像素哈希对比，只有画面变化才触发 OCR。别人 3 秒轮询一次，你的 CPU 占用近乎为零
+2. **🔒 AI 熔断保护** — 连续 5 次 API 失败自动暂停 30 秒，防止无效重试烧钱
+3. **🎭 人性化操作模拟** — 鼠标曲线移动、正态分布随机延迟、打字速度波动，降低被微信风控的概率
+
+---
+
 ## ⚙️ 怎么改规则 / How to Customize
 
 编辑 `config.py`：
