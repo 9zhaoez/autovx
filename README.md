@@ -22,13 +22,19 @@ It watches your WeChat window, reads new messages via OCR, generates replies wit
 pip install -r requirements_v2.txt
 ```
 
-### 2. 配 AI / Set API Key
+### 2. 配 AI Key（必做）/ Set API Key
 
-新建 `.env` 文件，写入你的 DeepSeek API Key：
+> ⚠️ **不配 Key 只能回复"嗯嗯好的"，必须做这一步！**
+
+1. 去 [platform.deepseek.com](https://platform.deepseek.com) 注册，充值 10 块钱够用几个月
+2. 在 `autovx` 文件夹里**新建一个文件**，名字叫 `.env`（注意开头有个点）
+3. 用记事本打开 `.env`，写入以下内容并保存：
 
 ```
 DEEPSEEK_API_KEY=sk-你的key
 ```
+
+> 💡 如果看不到 `.env` 文件，是 Windows 隐藏了它。在文件夹里勾选「查看 → 显示隐藏的项目」即可。
 
 ### 3. 改规则（可选）/ Edit Rules
 
