@@ -206,10 +206,10 @@ OCR_ENGINE = "rapidocr"
 OCR_BOTTOM_RATIO = 1.0
 
 # 聊天区上边距比例（消息开始的位置）
-CHAT_TOP_RATIO = 0.42
+CHAT_TOP_RATIO = 0.47
 
 # 聊天区下边距比例（输入框上方的位置）
-CHAT_BOTTOM_RATIO = 0.72
+CHAT_BOTTOM_RATIO = 0.77
 
 # OCR 调试模式：保存截图到当前目录（排查问题时开启）
 OCR_DEBUG = True
