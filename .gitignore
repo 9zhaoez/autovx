@@ -1,0 +1,24 @@
+# 环境变量 / 密钥
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# 数据文件
+*.db
+*.db-shm
+*.db-wal
+*.json.backup
+photo/
+
+# 调试输出
+@AutomationLog.txt
+uia_tree_dump.txt
+
+# IDE
+.vscode/
+.idea/
